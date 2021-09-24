@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import './Header.scss';
 
 const Header = (
@@ -6,6 +6,8 @@ const Header = (
   {contentPanel: any, historyBtn:any, searchCallback: any, historyBtnCallback:any}) => {
 
   let searchQuery = "";
+
+  const searchField = useRef(null);
 
   const inputHandler = (event:any) => {
     searchQuery = event.target.value;
@@ -16,18 +18,18 @@ const Header = (
   }
 
   const clickHandler = () => {
-    searchCallback(searchQuery)
+    searchCallback(searchQuery);
+    searchField.current.value = "";
   }
 
   return (
     <React.Fragment>
       <header>
         <div className="title-history">
-          <p>Hacker News Search</p>
           <p onClick={historyHandler}>{contentPanel ? "Hide history" : "Show History"}</p>
         </div>
         <div className="search-field">
-          <input type="text" onChange={inputHandler} />
+          <input type="text" ref={searchField} onChange={inputHandler} />
           <button type="button" onClick={clickHandler}>GO</button>
         </div>
       </header>

@@ -9,7 +9,8 @@
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 750px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     ul {
       margin: 0;
       list-style-type: none;

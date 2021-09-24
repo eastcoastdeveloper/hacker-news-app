@@ -6,13 +6,9 @@ header {
   position: relative;
   .title-history {
     font: normal 16px sans-serif;
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-column-gap: 15px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    p:last-child {
+    float: left;
+    margin-top: 5px;
+    p {
       font: normal 12px sans-serif;
       line-height: 12px;
       text-transform: uppercase;
@@ -25,6 +21,10 @@ header {
   }
   .search-field {
     float: right;
+    width: 50%;
+    display: grid;
+    grid-template-columns: calc(100% - 45px) 40px;
+    grid-column-gap: 5px;
     input {
       padding: 5px;
       border-radius: 4px;
