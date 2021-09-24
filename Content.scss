@@ -1,0 +1,56 @@
+.content {
+  height: calc(100% - 110px);
+  padding: 20px;
+  main {
+    background-color: #313b3f;
+    position: relative;
+    height: 100%;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 750px;
+    overflow: auto;
+    ul {
+      margin: 0;
+      list-style-type: none;
+      padding: 0;
+      li {
+        line-height: 20px;
+        padding: 5px 15px;
+        list-style-position: inside;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white;
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            color: #d9a74a;
+          }
+        }
+      }
+      li:nth-child(odd) {
+        background-color: #03658c;
+      }
+      li:nth-child(even) {
+        background-color: #457b9d;
+      }
+    }
+    #search-history {
+      position: absolute;
+      background-color: #03658c;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 750px;
+      transition: left 0.5s;
+    }
+    .show-panel {
+      left: 0;
+    }
+    .hide-panel {
+      left: 110%;
+    }
+  }
+}
