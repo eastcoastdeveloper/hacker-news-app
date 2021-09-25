@@ -25,6 +25,7 @@ header {
     display: grid;
     grid-template-columns: calc(100% - 45px) 40px;
     grid-column-gap: 5px;
+    max-width: 300px;
     input {
       padding: 5px;
       border-radius: 4px;
