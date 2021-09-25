@@ -24,6 +24,7 @@ const App = () => {
     userQuery = val;
     isMounted.current = false;
     !isMounted.current ? fetchData() : "";
+    setPanel(false);
   }, [])
 
   const fetchData = async () => {
