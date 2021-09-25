@@ -3,7 +3,7 @@ import "./Content.scss";
 
 const Content = (
   {contentPanel, searchQuery, userQuery, historyList}:
-  {contentPanel:any, searchQuery: any, userQuery:any, historyList:any}) => {
+  {contentPanel:boolean, searchQuery: string, userQuery:any, historyList:string}) => {
   
   return (
     <div className="content">
