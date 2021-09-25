@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import Content from './Content';
 import Footer from './Footer';
 import Header from './Header';
-import './style.css';
+import './style.scss';
 
 const App = () => {
 
