@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import "./Content.scss";
 
 const Content = (
-  {contentPanel, searchQuery, userQuery, historyList}:
-  {contentPanel:boolean, searchQuery: string, userQuery:any, historyList:string}) => {
+  {contentPanel, searchQuery, historyList}:
+  {contentPanel:boolean, searchQuery: any, historyList:any}) => {
   
   return (
     <div className="content">

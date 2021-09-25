@@ -51,7 +51,6 @@ const App = () => {
         <Content
           contentPanel={contentPanel}
           searchQuery={searchQuery}
-          userQuery={userQuery}
           historyList={historyList}
         />
         <Footer />
