@@ -5,11 +5,15 @@ const Content = (
   {contentPanel, searchQuery, historyList}:
   {contentPanel:boolean, searchQuery: any, historyList:any}) => {
 
+  useEffect(() => {
+    mainElem.current.scrollTop = 0;
+  })
+  
   const mainElem = useRef(null);
   
   return (
     <div className="content">
-     <main ref={mainElem}>
+     <main ref={mainElem} className={contentPanel ? 'overflow-y-none' : ''}>
      <ul>
      {
        searchQuery.map((item, index) => (
