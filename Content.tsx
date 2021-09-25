@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./Content.scss";
 
 const Content = (
   {contentPanel, searchQuery, historyList}:
   {contentPanel:boolean, searchQuery: any, historyList:any}) => {
+
+  const mainElem = useRef(null);
   
   return (
     <div className="content">
-     <main>
+     <main ref={mainElem}>
      <ul>
      {
        searchQuery.map((item, index) => (
