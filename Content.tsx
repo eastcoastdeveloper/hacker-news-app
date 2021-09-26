@@ -11,8 +11,7 @@ const Content = (
   
   const mainElem = useRef(null);
   const searchAgain = (i:number) => {
-    i = historyList[i].query;
-    const dataIndex = i;
+    const dataIndex = historyList[i].query;
     searchCallback(dataIndex)
   }
   
