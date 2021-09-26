@@ -37,8 +37,8 @@ const Content = (
               <li key={index}>
                 <div>
                   <div className="history-query">
-                    <span>{val.query}</span>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;
-                    <span>top 3 results</span>
+                    <span>{val.query}</span>
+                    <span>Top 3 Results</span>
                     <span onClick={() => searchAgain(index)}>Search Again</span>
                   </div>
                   <div className="history-results">
