@@ -58,9 +58,10 @@
         background-color: #457b9d;
         padding-top: 10px;
       }
-      ol {
-        padding-left: 30px;
+      ul {
+        padding-left: 15px;
         line-height: 30px;
+        list-style-type: none;
         li {
           width: calc(100% - 35px);
           background-color: #457b9d;
