@@ -73,15 +73,13 @@
       }
       .history-query {
         font: normal 14px sans-serif;
-        display: grid;
-        grid-template-columns: 80px auto 95px;
-        grid-column-gap: 10px;
+        overflow: auto;
         span:first-child {
           text-transform: capitalize;
-          border-right: 1px solid white;
         }
         span:last-child {
           cursor: pointer;
+          float: right;
         }
       }
       .history-results {
