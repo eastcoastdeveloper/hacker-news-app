@@ -73,9 +73,11 @@
       }
       .history-query {
         font: normal 14px sans-serif;
+        padding-top: 5px;
         overflow: auto;
         span:first-child {
           text-transform: capitalize;
+          float: left;
         }
         span:last-child {
           cursor: pointer;
