@@ -27,11 +27,12 @@ const App = () => {
     setPanel(false);
   }, [])
 
+  // One fetch for all components
   const fetchData = async () => {
     const res = await fetch(url + userQuery);
     const jsonData = await res.json();
     searchQuery = jsonData.hits;
-    historyList.push(jsonData.query)
+    historyList.push(jsonData)
     setState(searchQuery);
     setList(historyList);
   };
@@ -53,6 +54,7 @@ const App = () => {
           contentPanel={contentPanel}
           searchQuery={searchQuery}
           historyList={historyList}
+          searchCallback={searchCallback}
         />
         <Footer />
       </div>

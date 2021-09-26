@@ -2,19 +2,25 @@ import React, { useEffect, useRef, useState } from 'react';
 import "./Content.scss";
 
 const Content = (
-  {contentPanel, searchQuery, historyList}:
-  {contentPanel:boolean, searchQuery: any, historyList:any}) => {
+  {contentPanel, searchQuery, historyList, searchCallback}:
+  {contentPanel:boolean, searchQuery: any, historyList:any, searchCallback:any}) => {
 
   useEffect(() => {
     mainElem.current.scrollTop = 0;
+    console.log(searchQuery)
   })
   
   const mainElem = useRef(null);
+  const searchAgain = (i:number) => {
+    i = historyList[i].query;
+    const dataIndex = i;
+    searchCallback(dataIndex)
+  }
   
   return (
     <div className="content">
      <main ref={mainElem} className={contentPanel ? 'overflow-y-none' : ''}>
-     <ul>
+     <ul className="search-results">
      {
        searchQuery.map((item, index) => (
         <li key={index}>
@@ -24,15 +30,27 @@ const Content = (
      }
     </ul>
       <div id="search-history" className={contentPanel ? 'show-panel' : 'hide-panel'}>
-      <ul>
-     {
-       historyList.map((item, index) => (
-        <li key={item}>
-        {item.toUpperCase()}
-      </li>
-      ))
-     }
-    </ul>
+        <h3>Search History</h3>
+        <ol>
+          {
+            historyList.map((val:any, index:number) => (
+              <li key={index}>
+                <div>
+                  <div className="history-query">
+                    <span>{val.query}</span>&nbsp;&nbsp;&#8226;&nbsp;&nbsp;
+                    <span>top 3 results</span>
+                    <span onClick={() => searchAgain(index)}>Search Again</span>
+                  </div>
+                  <div className="history-results">
+                    <a href={val.hits[0].story_url} target="_blank">{val.hits[0].story_title}</a>
+                    <a href={val.hits[1].story_url} target="_blank">{val.hits[1].story_title}</a>
+                    <a href={val.hits[2].story_url} target="_blank">{val.hits[2].story_title}</a>
+                  </div>
+                </div>
+                </li>
+            ))
+          }
+      </ol>
       </div>
      </main>
     </div>

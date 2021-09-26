@@ -11,7 +11,7 @@
     max-width: 750px;
     overflow-y: auto;
     overflow-x: hidden;
-    ul {
+    .search-results {
       margin: 0;
       list-style-type: none;
       padding: 0;
@@ -40,12 +40,61 @@
     }
     #search-history {
       position: absolute;
+      overflow-y: auto;
       background-color: #03658c;
       top: 0;
       width: 100%;
       height: 100%;
       max-width: 750px;
       transition: left 0.5s;
+      color: white;
+      h3 {
+        color: #fff;
+        margin-top: 0;
+        padding-left: 10px;
+        padding-bottom: 7px;
+        font: bold 16px sans-serif;
+        letter-spacing: 1px;
+        background-color: #457b9d;
+        padding-top: 10px;
+      }
+      ol {
+        padding-left: 30px;
+        line-height: 30px;
+        li {
+          width: calc(100% - 35px);
+          background-color: #457b9d;
+          border-radius: 4px;
+          padding: 0 10px;
+        }
+        li:not(:first-child) {
+          margin-top: 15px;
+        }
+      }
+      .history-query {
+        font: normal 14px sans-serif;
+        span:first-child {
+          text-transform: capitalize;
+        }
+        span:last-child {
+          float: right;
+          cursor: pointer;
+        }
+      }
+      .history-results {
+        margin-top: 5px;
+        padding-bottom: 5px;
+        a {
+          font: normal 13px sans-serif;
+          color: white;
+          text-decoration: none;
+          display: block;
+          line-height: 22px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
     }
     .show-panel {
       left: 0;
