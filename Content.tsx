@@ -20,7 +20,7 @@ const Content = (
      <main ref={mainElem} className={contentPanel ? 'overflow-y-none' : ''}>
      <ul className="search-results">
      {
-       searchQuery.map((item, index) => (
+       searchQuery.map((item:any, index:number) => (
         <li key={index}>
         <a target="_blank" href={item.story_url}>{item.story_title}</a>
       </li>
