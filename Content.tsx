@@ -7,7 +7,6 @@ const Content = (
 
   useEffect(() => {
     mainElem.current.scrollTop = 0;
-    console.log(searchQuery)
   })
   
   const mainElem = useRef(null);
