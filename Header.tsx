@@ -29,7 +29,7 @@ const Header = (
           <p onClick={historyHandler}>{contentPanel ? "Hide history" : "Show History"}</p>
         </div>
         <div className="search-field">
-          <input type="text" ref={searchField} onChange={inputHandler} />
+          <input type="text" placeholder="Search tech..." ref={searchField} onChange={inputHandler} />
           <button type="button" onClick={clickHandler}>GO</button>
         </div>
       </header>
