@@ -2,13 +2,20 @@ footer {
   background-color: #313b3f;
   position: absolute;
   width: 100%;
-  padding: 5px;
-  text-align: center;
+  padding: 5px 15px;
   bottom: 0;
   box-sizing: border-box;
   color: white;
-  p {
+  span {
     margin: 0;
     font: normal 12px sans-serif;
+  }
+  a {
+    color: white;
+    font: normal 12px sans-serif;
+    text-decoration: none;
+    float: right;
+    line-height: 20px;
+
   }
 }

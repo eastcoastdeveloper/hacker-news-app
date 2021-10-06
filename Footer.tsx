@@ -4,7 +4,8 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer>
-      <p>Hacker News Search App © 2021</p>
+      <span>Hacker News Search App © 2021</span>
+      <a href="https://stackblitz.com/edit/react-ts-iyjbuh" target="_blank">view code</a>
     </footer>
   )
 }
