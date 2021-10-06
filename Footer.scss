@@ -6,6 +6,10 @@ footer {
   bottom: 0;
   box-sizing: border-box;
   color: white;
+  > div {
+    max-width: 750px;
+    margin: 0 auto;
+  }
   span {
     margin: 0;
     font: normal 12px sans-serif;
