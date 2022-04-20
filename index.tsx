@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { render } from 'react-dom';
 import Content from './Content';
-import Footer from './Footer';
 import Header from './Header';
 import './style.scss';
 
@@ -55,7 +54,6 @@ const App = () => {
         historyList={historyList}
         searchCallback={searchCallback}
       />
-      <Footer />
     </div>
   );
 };

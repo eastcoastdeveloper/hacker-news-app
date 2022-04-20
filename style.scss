@@ -1,14 +1,27 @@
-html, body {
-  font-family: sans-serif;
+#root,
+.wrapper {
+  height: 96%;
+  margin-top: 20px;
+}
+
+p {
+  margin: 0;
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
-
-  #root, .wrapper {
-    height: 100%;
-  }
-  
-  p {
-    margin: 0;
-  }
+}
+.website {
+  font: normal 14px sans-serif;
+  letter-spacing: 0.5px;
+  display: block;
+  cursor: pointer;
+  background-color: #313b3f;
+  color: #fcdb42;
+  padding: 10px;
+  text-decoration: none;
+  text-align: right;
 }
