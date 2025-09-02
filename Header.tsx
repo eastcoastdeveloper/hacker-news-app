@@ -40,7 +40,7 @@ const Header = ({
         <div className="search-field">
           <input
             type="text"
-            placeholder="Search tech..."
+            placeholder="Search technology..."
             ref={searchField}
             onChange={inputHandler}
           />
